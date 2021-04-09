@@ -1,29 +1,18 @@
-<!DOCTYPE html>
 <html>
+	<div id="app">
+		{{message}}
+	</div>
+	<script src="https://unpkg.com/vue@next">
+		const { createApp, ref} = Vue;
 
-<head>
-    <title>Vue 101 Part 1 </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<body>
-    
-    <div id="app" class="container">
-        <h1>Part 1</h1>
-        <p>My local property: {{ myLocalProperty }}</p>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-    <script>
-        const app = new Vue({
-            el: '#app',
-            data: {
-                myLocalProperty: 'Im a local property value'
-            }
-        });
-    </script>
-</body>
-
+		const vm = createApp({
+			setup(){
+			const message = ref("hello");
+			return {
+			 message
+			 }
+			}
+		});
+		vm.mount("#app");
+	</script>
 </html>
