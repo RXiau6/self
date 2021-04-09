@@ -2,8 +2,9 @@
 	<div id="app">
 		{{message}}
 	</div>
-	<script src="https://unpkg.com/vue@next">
-		const { createApp, ref} = Vue;
+	<script src="https://unpkg.com/vue@next"></script>
+	<script>
+			const { createApp, ref} = Vue;
 
 		const vm = createApp({
 			setup(){
@@ -14,5 +15,5 @@
 			}
 		});
 		vm.mount("#app");
-	</script>
+		</script>
 </html>
