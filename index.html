@@ -1,0 +1,18 @@
+<!--TEST Vue-->
+<script src="https://unpkg.com/vue@next">
+	<div id="app">
+	{{message}}
+	</div>
+	const { createApp, ref} = Vue;
+
+	const vm =createApp({
+	setup () {
+	const message = ref("hello,vue");
+	return {
+	message
+	}
+	}
+	});
+
+	vm.mount('#app');
+</script>
